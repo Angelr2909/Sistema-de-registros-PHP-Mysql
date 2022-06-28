@@ -1,0 +1,208 @@
+:root {
+    --ligthcolor: #EEEEEE;
+    --darkcolor: #191919;
+    --graycolor: #393E46;
+    --bluecolor: #00909E;
+    --bluecolorlight: #c5ede4;
+    --blackcolor: #040303;
+    --grayligth: #808080;
+}
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* main login start  */
+.content-login{
+
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.welcome{
+    text-align: center;
+    padding: 30px 0;
+}
+.welcome h1{
+    margin-top: 60px;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 900;
+    color: #393E46;
+}
+.welcome h2{
+    color: #393E46;
+}
+.col1{
+    flex: 1;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #f0f0f0;
+    border-radius: 20px;
+    padding: 20px;
+}
+.col2{
+    flex: 1.5;
+}
+.login{
+    display: block;
+    margin-top: 10px;
+}
+.col1 label{
+    width: 80%;
+    height: 80%;
+    margin: 20px auto 0 auto;
+    font-size: 1.1em;
+    color: var(--graycolor);
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.col1 input{
+    font-size: 1em;
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px 0;
+    border-style: none;
+    box-shadow:  0 -1px #00909E inset ;
+    letter-spacing: 3px;
+}
+.col1 input:focus{
+    border-color: var(--bluecolor);
+    outline: 0 none;
+}
+.col1 label::placeholder{
+    letter-spacing: 3px;
+}
+.col1 input::placeholder{
+    letter-spacing: 3px;
+}
+.col2 img{
+    width: 100%;
+    object-fit: cover;
+}
+.password{
+    position: relative;
+}
+.password > i{
+    position: absolute;
+    left: 84%;
+    bottom: 25%;
+    cursor: pointer;
+    color: #00909E;
+    font-size: 1.2em;
+}
+
+.label{
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+}
+.label label{
+    margin: 0 5px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0;
+    width: auto;
+}
+#remember{
+    box-shadow: none;
+    width: auto;
+    margin: 10px 0; 
+}
+.pass{
+    text-align: center;
+}
+.pass > a{
+    color: #393E46;
+    font-size: 14px;
+    font-weight: 600;
+    margin: auto;
+    border-bottom: 5px solid --bluecolor;
+}
+.content-btn{
+    width: 80%;
+    margin: 30px auto 10px auto;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.btn{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 15px 20px;
+    color: #FFF;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.content-btn > input{
+    flex: 1;
+    background-color: var(--bluecolor);
+    display: block;
+    text-align: center;
+    padding: 15px 20px;
+    color: #FFF;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.msj-error{
+    width: 80%;
+    margin: auto;
+}
+
+.content-btn > a{
+    flex: 1;
+    background-color: var(--darkcolor);
+    color: var(--ligthcolor);
+}
+
+@media (max-width:768px){
+    .content-login{
+        display: block;
+    }
+    .col1{
+        margin-bottom: 60px;
+    }
+    .col2{
+        display: none;
+    }
+    .cont-table{
+        display: block;
+        overflow-x: scroll;
+    }
+}
+@media (max-width:576px){
+
+    .content-login{
+        display: flex;
+        height: 100vh;
+        margin: auto;
+    }
+    .col1 input, .col1 label, .content-btn, .label{
+        width: 100%;
+    }
+    .welcome h1{
+        margin-top: 0;
+    }
+    .col2{
+        display: none;
+    }
+    .content-btn{
+        display: block;
+    }
+    .content-btn a{
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+    
+}
+
+/* main login end  */

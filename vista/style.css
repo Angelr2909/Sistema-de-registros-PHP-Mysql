@@ -1,0 +1,192 @@
+:root {
+    --ligthcolor: #EEEEEE;
+    --darkcolor: #191919;
+    --graycolor: #393E46;
+    --bluecolor: #00909E;
+    --blackcolor: #040303;
+    --grayligth: #808080;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form{
+    background-color: #EEEEEE;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-login{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.login{
+    display: block;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 300px;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    border: 1px solid #a5a5a593;
+    font-weight: 300;
+}
+.login:focus{
+    border: 1px solid #1C658C;
+}
+.login::placeholder { 
+    color: rgb(173, 173, 173); 
+}
+
+input[name="login"]{
+    background-color: #1C658C;
+    color: #EEEEEE;
+    font-weight:500;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+.form a {
+    background-color: #D8D2CB;
+    color: #1C658C;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 300px;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight:500;
+}
+.btn{
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 10px 50px !important;
+    color: #fff;
+    background: var(--bluecolor);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* REGISTRO DE PARTES DIARIOS */
+.cont-nav{
+    background-color: var(--graycolor);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.cont-nav > h2{
+    display: inline-block;
+    font-size: 1em;
+    color: #EEEEEE;
+    margin: 0 20px 0 0; 
+    padding: 0;
+}
+.cont-nav > a{
+    display: inline-block;
+    padding: 10px 20px ;
+    background: var(--bluecolor) ;
+    color: var(--ligthcolor);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 20px;
+}
+.cont-nav > a:hover{
+    background-color: var(--ligthcolor);
+    color: var(--blackcolor);
+    transition: all .5s;
+}
+.cont-register{
+    background-color: #EEEEEE;
+}
+.cont-register > form{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 50%;
+    margin: auto;
+}
+.cont-register > form{
+    height: calc(100vh - 60px);
+    padding: 20px;
+    max-width: 100%;
+    align-items: center;
+
+}
+.col1, .col2{
+    box-sizing: border-box;   
+    flex: 1;
+}
+.col3{
+    width: 100%;
+    margin-bottom: auto;
+    text-align: center;
+}
+.col1 > *, .col2 > *{
+    display: block;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+.cont-register > form label{
+    font-size: 1.1em;
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+.cont-register > form input, .cont-register > form select{
+    font-weight: 300;
+    font-size: 1em;
+    padding: 10px;
+    border-style: none;
+    border-radius:5px;
+}
+.cont-register > form select:focus, .cont-register > form input:focus{
+    border-color: var(--bluecolor);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px #37b4f788;
+    outline: 0 none;
+}
+
+
+
+/* media screen register */
+@media (max-width:921px){
+    .cont-nav > h2{
+        margin-right: auto;
+    }
+    .cont-register {
+        height: calc(100vh - 60px);
+    }
+    .col1, .col2{
+        flex: none;
+        width: 100%;
+    }
+    .cont-register > form{
+        width: 90%;
+        padding: 0;
+        gap: 0;
+        height: 0;
+        margin: auto;
+    }
+    .col3 > .btn{
+        margin-top: 30px;
+        padding: 10px 30px;
+    }
+}
